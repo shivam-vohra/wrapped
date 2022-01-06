@@ -3,10 +3,13 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "./Dashboard.css";
 import HomeTabPanel from './HomeTabPanel';
 import CategoryTabPanel from './CategoryTabPanel';
+import AddCategoryPopUp from './AddCategoryPopUp';
+import Popup from 'reactjs-popup';
+import "./AddCategoryPopUp.css";
 
-const Dashboard = ({categories, onCategoryAdded}) => {
+const Dashboard = ({ categories, onCategoryAdded }) => {
     const [tabIndex, setTabIndex] = useState(0);
-   
+
     const [categoryName, setName] = useState("");
 
     const nameChangeHandler = (event) => {
@@ -53,23 +56,40 @@ const Dashboard = ({categories, onCategoryAdded}) => {
                             </TabPanel>
                         } else {
                             return <TabPanel>
-                                <CategoryTabPanel categoryName={category2}/>
+                                <CategoryTabPanel categoryName={category2} />
                             </TabPanel>
                         }
                     }
 
                     )}
                     <TabPanel>
-                        <h1>Add Category</h1>
-                        <br />
-                        <label>Category Name</label>
-                        <input onChange={nameChangeHandler}></input>
-                        <button onClick={onClick}>Save Category</button>
+                        {/* <AddCategoryPopUp /> */}
+                        <Popup
+                            // trigger={<button className="button"> Click for More Info </button>}
+                            modal
+                            nested
+                            className="popup"
+                        >
+                            {close => (
+                                <div className="modal">
+                                    <button className="close" onClick={close}>
+                                        &times;
+                                    </button>
+                                    <h1>Add Category</h1>
+                                    <br />
+                                    <label>Category Name</label>
+                                    <input onChange={nameChangeHandler}></input>
+                                    <button onClick={onClick}>Save Category</button>
+                                    <div className="actions">
+                                    </div>
+                                </div>
+                            )}
+                        </Popup>
                     </TabPanel>
                 </div>
             </Tabs>
-            </div>
-            
+        </div>
+
     )
 }
 

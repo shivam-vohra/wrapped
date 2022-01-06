@@ -1,9 +1,12 @@
 import React from 'react'
+import CategoryTransactionCard from './CategoryTransactionCard'
+import CategoryGraph from './CategoryGraph'
 
 const CategoryTabPanel = ({categoryName}) => {
     return (
         <div>
-            <h1>{categoryName}</h1>
+            <CategoryGraph categoryName = {categoryName}/>
+            <CategoryTransactionCard categoryName = {categoryName}/>
         </div>
     )
 }
