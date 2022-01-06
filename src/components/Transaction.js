@@ -7,7 +7,7 @@ const Transaction = ({account, date, location, amount}) => {
             <div className="transaction">
                 {/* Account */}
                 <div className='transaction-item'>
-                    <p>     {account}</p>
+                    <p>{account}</p>
                 </div>
                 <div className='transaction-item'>
                     {/* Date */}

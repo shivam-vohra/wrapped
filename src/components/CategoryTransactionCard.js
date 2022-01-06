@@ -3,7 +3,7 @@ import "./TransactionCard.css"
 import Transaction from './Transaction'
 import { useState } from 'react'
 
-const TransactionCard = () => {
+const CategoryTransactionCard = ({categoryName}) => {
 
     const [transactionData, setTransactionData] = useState([]);
 
@@ -45,4 +45,4 @@ const TransactionCard = () => {
     )
 }
 
-export default TransactionCard
+export default CategoryTransactionCard
