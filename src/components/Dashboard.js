@@ -4,12 +4,14 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
     return (
-        <div className = "dashboardPage">
-            <h1>Dashboard</h1>
+        <div >
+            <h1 className = "dashboardPage">Dashboard</h1>
             <Tabs>
                 <TabList className = "tabList">
                     <Tab>Title 1</Tab>
                     <Tab>Title 2</Tab>
+                    <Tab>Title 3</Tab>
+                    <Tab>Title 4</Tab>
                 </TabList>
 
                 <TabPanel>
@@ -17,6 +19,12 @@ const Dashboard = () => {
                 </TabPanel>
                 <TabPanel>
                     <h2>Any content 2</h2>
+                </TabPanel>
+                <TabPanel>
+                    <h2>Any content 3</h2>
+                </TabPanel>
+                <TabPanel>
+                    <h2>Any content 4</h2>
                 </TabPanel>
             </Tabs>
         </div>
