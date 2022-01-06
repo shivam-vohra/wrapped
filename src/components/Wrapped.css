@@ -1,0 +1,46 @@
+.store {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    will-change: transform;
+    transition: all 0.3s ease-in;
+    background-color: blue;
+  }
+
+
+  .store-alt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    will-change: transform;
+    transition: all 0.3s ease-in;
+    background-color: red;
+  }
+
+
+.store-name,
+.store-spent,
+.store-rank{
+    margin-left: 10px;
+}
+
+.stores-wrapper {
+    border: 1px solid salmon;
+    width: 200px;
+    padding: 0;
+    margin-left: 25px;
+  }
+
+
+.store-list {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.stores-header{
+    font-size: 25px;
+}
