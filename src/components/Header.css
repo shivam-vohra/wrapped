@@ -18,3 +18,8 @@ a {
     text-decoration: none;
     color: white;
 }
+
+h1 {
+    font-size: 36;
+    font-weight: bold;
+}
