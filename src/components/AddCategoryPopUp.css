@@ -3,12 +3,12 @@
     text-align: center;
     background-color: #004879;
     color: #E8E8F0;
-    height: 275px;
+    height: 425px;
     /* position: fixed; */
     /* align-content: center;
     justify-content: center; */
     margin: auto;
-    width: 500px;
+    width: 550px;
     /* display: inline-block; */
     flex-direction: column;
     border-radius: 30px;
@@ -86,4 +86,23 @@
   color:#004879;
   text-indent: 10px;
   font-size: 20px;
+  
+}
+
+.input-descr {
+  /* width: 300px; */
+  align-items: center;
+  border-radius: 20px;
+  margin: 20px;
+  color:#004879;
+  text-indent: 10px;
+  font-size: 20px;
+  width: 250px;
+  height: 150px;
+  text-overflow: wrap;
+}
+
+.pair {
+  align-items: center;
+  display: flex;
 }

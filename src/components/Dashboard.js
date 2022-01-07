@@ -1,19 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "./Dashboard.css";
 import HomeTabPanel from './HomeTabPanel';
 import CategoryTabPanel from './CategoryTabPanel';
 import Popup from 'reactjs-popup';
 import "./AddCategoryPopUp.css";
+import Header from './Header';
 
 const Dashboard = ({ categories, onCategoryAdded }) => {
     const [tabIndex, setTabIndex] = useState(0);
 
     const [categoryName, setName] = useState("");
+    const [categoryBudget, setBudget] = useState("");
+    const [categoryDescr, setDescr] = useState("");
+
+    const [userInfo, setUserInfo] = useState([]);
+
 
     const nameChangeHandler = (event) => {
         setName(event.target.value);
-        console.log(categoryName)
+        // console.log(categoryName)
+    }
+    const budgetChangeHandler = (event) => {
+        setBudget(event.target.value);
+        // console.log(categoryName)
+    }
+    const descrChangeHandler = (event) => {
+        setDescr(event.target.value);
+        // console.log(categoryName)
     }
 
     const onClick = () => {
@@ -22,15 +36,21 @@ const Dashboard = ({ categories, onCategoryAdded }) => {
         //setCategories(arr => [...arr, categoryName]);
         onCategoryAdded([...sample]);
     };
+    // https://wrapped1-backend.herokuapp.com/api/user/0/info
+    useEffect(() => {
+        fetch('https://wrapped1-backend.herokuapp.com/api/user/1/info') 
+        .then(response => response.json())
+        .then(json => setUserInfo(json))
+    })
 
+    console.log(userInfo)
     return (
         <div >
-            <h1 className="dashboardPage"><b>Dashboard</b> Hi, Name</h1>
+            <Header />
+            <h1 className="dashboardPage"><b>Dashboard</b> Hi, {userInfo.userFirstName}</h1>
             <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
                 <TabList className="tabList">
-                    {/* <Tab>Home</Tab>
-                    <Tab>Food</Tab>
-                    <Tab>Education</Tab> */}
+                    
                     {categories.map((category) => (
                         <Tab>{category}</Tab>
                     ))}
@@ -47,13 +67,17 @@ const Dashboard = ({ categories, onCategoryAdded }) => {
                                 </button>
                                 <div className="form">
                                     <h1 className="form-heading">Add Category</h1>
-                                    <div>
+                                    <div className = "pair">
                                         <label>Category Name</label>
                                         <input className="input" onChange={nameChangeHandler}></input>
                                     </div>
-                                    <div>
+                                    <div className = "pair">
                                         <label>Category Budget</label>
-                                        <input className="input"></input>
+                                        <input className="input" onChange={budgetChangeHandler}></input>
+                                    </div>
+                                    <div className = "pair">
+                                        <label>Category Description</label>
+                                        <textarea className="input-descr" onChange={descrChangeHandler}></textarea>
                                     </div>
                                     <button className = 'form-button' onClick={() => { onClick(); close() }}>Save Category</button>
                                 </div>

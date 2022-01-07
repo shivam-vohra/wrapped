@@ -22,4 +22,8 @@
     margin-top: 10px;
     font-size: 30px;
 }
+
+.card {
+    margin-bottom: 2em;
+}
 /* offset-x | offset-y | blur-radius | spread-radius | color */

@@ -5,12 +5,13 @@ import TopStores from './TopStores';
 import {data} from './WrappedData.js'
 import TotalScore from './TotalScore'
 import "./Wrapped.css";
-
+import Header from './Header';
 
 const Wrapped = () => {
 
     return (
       <div>
+        <Header />
         {/* <TotalScore/> */}
         <div>
           <Heading marginTop={10} marginBottom={3} color="#D22E1E"> Your saved money </Heading>

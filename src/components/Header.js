@@ -7,8 +7,8 @@ const Header = () => {
         <div className='header'>
             <h1>Wrapped1</h1>
             <div className='links'>
-                <Link to="/">Dashboard</Link>
-                <Link to="wrapped">Latest Wrapped</Link>
+                <Link to="/dashboard">Dashboard</Link>
+                <Link to="/wrapped">Latest Wrapped</Link>
             </div>
         </div>
     )
