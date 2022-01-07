@@ -5,7 +5,7 @@
     padding: 10px;
     will-change: transform;
     transition: all 0.3s ease-in;
-    background-color: blue;
+    background-color: #c5e5fa;
   }
 
 
@@ -16,7 +16,7 @@
     padding: 10px;
     will-change: transform;
     transition: all 0.3s ease-in;
-    background-color: red;
+    background-color: #FBEAE9;
   }
 
 
@@ -28,19 +28,28 @@
 
 .stores-wrapper {
     border: 1px solid salmon;
-    width: 200px;
+    width: 300px;
     padding: 0;
-    margin-left: 25px;
+    margin-left: 100px;
   }
 
 
 .store-list {
     font-family: sans-serif;
     text-align: center;
-    margin-top: 200px;
     margin-bottom: 50px;
 }
 
+.list-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+}
+
 .stores-header{
-    font-size: 25px;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 5px;
+    font-style: bold;
 }

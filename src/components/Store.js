@@ -25,7 +25,7 @@ export default function Store( {row} ) {
     <li className={cname}>
       <span className="store-ranks">{'#'+String(row.rank)}</span>
       <span className="store-name">{row.name}</span>
-      <span className="store-spent">{row.spent}</span>
+      <span className="store-spent">{"$" + String(row.spent)}</span>
     </li>
   );
 }
