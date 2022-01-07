@@ -5,7 +5,7 @@
 
 .transaction {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 250px 300px 300px 300px;
     table-layout: fixed;
     padding: 10px;
     background-color: rgb(241, 237, 232);

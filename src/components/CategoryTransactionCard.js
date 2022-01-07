@@ -3,13 +3,13 @@ import "./TransactionCard.css"
 import Transaction from './Transaction'
 import { useState } from 'react'
 
-const TransactionCard = () => {
+const CategoryTransactionCard = ({categoryName}) => {
 
     const [transactionData, setTransactionData] = useState([]);
 
-    
+    // console.log({categoryName});
     useEffect(() => {
-        fetch('https://wrapped1-backend.herokuapp.com/api/user/1/0/transactions') 
+        fetch(`https://wrapped1-backend.herokuapp.com/api/user/1/0/transactions/category/${categoryName}`)
         .then(response => response.json())
         .then(json => setTransactionData(json))
     })
@@ -45,4 +45,4 @@ const TransactionCard = () => {
     )
 }
 
-export default TransactionCard
+export default CategoryTransactionCard

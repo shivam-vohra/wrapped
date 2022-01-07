@@ -5,7 +5,7 @@ import TopStores from './TopStores.js';
 import Feature from './Feature'
 import TotalScore from './TotalScore'
 import "./Wrapped.css";
-
+import Header from './Header';
 
 const Wrapped = () => {
 
@@ -49,6 +49,7 @@ const Wrapped = () => {
 
     return (
       <div>
+        <Header />
         <TotalScore/>
         
         {topWraps.map((category, index) => (
