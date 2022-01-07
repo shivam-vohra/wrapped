@@ -52,23 +52,23 @@ const Graphs = () => {
     },
     {
       "name": "Sep",
-      "Total Spent Monthly": 255,
-      "Average Spent Weekly": 52.30
+      "Total Spent Monthly": 165,
+      "Average Spent Weekly": 43.35
     },
     {
       "name": "Oct",
-      "Total Spent Monthly": 255,
-      "Average Spent Weekly": 52.30
+      "Total Spent Monthly": 560,
+      "Average Spent Weekly": 100.40
     },
     {
       "name": "Nov",
-      "Total Spent Monthly": 255,
-      "Average Spent Weekly": 52.30
+      "Total Spent Monthly": 678,
+      "Average Spent Weekly": 190.00
     },
     {
       "name": "Dec",
-      "Total Spent Monthly": 255,
-      "Average Spent Weekly": 52.30
+      "Total Spent Monthly": 956,
+      "Average Spent Weekly": 273.92
     }
   ];
 
@@ -102,20 +102,10 @@ const Graphs = () => {
               <Bar dataKey="Average Spent Weekly" fill="#82ca9d" />
             </BarChart>
           </div>
-          {/* <div className='pie'>
-                <PieChart width={730} height={250}>
-                    <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={50} fill="#8884d8" />
-                </PieChart>
-            </div> */}
         </div>
-        {/* <div className = 'piechart'>
-            <PieChart width={730} height={250}>
-            <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={50} fill="#8884d8" />
-            </PieChart>
-        </div> */}
       </div>
       <div className='pie'>
-        <div className = 'budgetTitle'>
+        <div className='budgetTitle'>
           <p>Budget</p>
         </div>
         <PieChart width={400} height={270}>

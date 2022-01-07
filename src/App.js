@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Wrapped from './components/Wrapped';
 import { useState } from 'react';
+import Login from './components/Login';
 
 function App() {
   const [categories, setCategories] = useState(["Home", "Food"]);
@@ -15,9 +16,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <Routes>
-          <Route path="/" element={<Dashboard categories={categories} onCategoryAdded={addCategory} />}></Route>
+          <Route path="/" exact element={<Login />}></Route>
+          <Route path="/dashboard" element={<Dashboard categories={categories} onCategoryAdded={addCategory} />}></Route>
           <Route path="/wrapped" element={<Wrapped/>}></Route>
         </Routes>
       </Router>

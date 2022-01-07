@@ -7,9 +7,9 @@ const CategoryTransactionCard = ({categoryName}) => {
 
     const [transactionData, setTransactionData] = useState([]);
 
-    
+    // console.log({categoryName});
     useEffect(() => {
-        fetch('https://wrapped1-backend.herokuapp.com/api/user/0/0/transactions')
+        fetch(`https://wrapped1-backend.herokuapp.com/api/user/1/0/transactions/category/${categoryName}`)
         .then(response => response.json())
         .then(json => setTransactionData(json))
     })
@@ -25,11 +25,11 @@ const CategoryTransactionCard = ({categoryName}) => {
                     </div>
                     <div className='title'>
                         {/* Date */}
-                        <p>&ensp;&ensp;&ensp;&ensp;&ensp;Date</p>
+                        <p>&ensp;Date</p>
                     </div>
                     {/* Location */}
                     <div className='title'>
-                        <p>&ensp;&ensp;&ensp;&ensp;&ensp;Location&ensp;</p>
+                        <p>&ensp;&ensp;Location</p>
                     </div>
                     {/* Amount */}
                     <div className='title'>
