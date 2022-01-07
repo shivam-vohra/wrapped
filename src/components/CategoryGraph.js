@@ -71,6 +71,69 @@ const data = {
             "Total Spent": 332,
             "Category Spent": 54,
         }
+    ],
+
+    "Shopping": [
+        {
+            "name": "Jan",
+            "Total Spent": 800,
+            "Category Spent": 111,
+        },
+        {
+            "name": "Feb",
+            "Total Spent": 680,
+            "Category Spent": 73,
+        },
+        {
+            "name": "Mar",
+            "Total Spent": 720,
+            "Category Spent": 198,
+        },
+        {
+            "name": "Apr",
+            "Total Spent": 500,
+            "Category Spent": 212,
+        },
+        {
+            "name": "May",
+            "Total Spent": 221,
+            "Category Spent": 39,
+        },
+        {
+            "name": "Jun",
+            "Total Spent": 433,
+            "Category Spent": 99,
+        },
+        {
+            "name": "Jul",
+            "Total Spent": 577,
+            "Category Spent": 101,
+        },
+        {
+            "name": "Aug",
+            "Total Spent": 662,
+            "Category Spent": 45,
+        },
+        {
+            "name": "Sep",
+            "Total Spent": 822,
+            "Category Spent": 329,
+        },
+        {
+            "name": "Oct",
+            "Total Spent": 101,
+            "Category Spent": 33,
+        },
+        {
+            "name": "Nov",
+            "Total Spent": 800,
+            "Category Spent": 130,
+        },
+        {
+            "name": "Dec",
+            "Total Spent": 332,
+            "Category Spent": 200,
+        }
     ]
 }
 
