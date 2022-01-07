@@ -3,7 +3,6 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "./Dashboard.css";
 import HomeTabPanel from './HomeTabPanel';
 import CategoryTabPanel from './CategoryTabPanel';
-import AddCategoryPopUp from './AddCategoryPopUp';
 import Popup from 'reactjs-popup';
 import "./AddCategoryPopUp.css";
 
@@ -35,7 +34,35 @@ const Dashboard = ({ categories, onCategoryAdded }) => {
                     {categories.map((category) => (
                         <Tab>{category}</Tab>
                     ))}
-                    <Tab>+</Tab>
+                    <Popup
+                        trigger={<Tab>+</Tab>}
+                        modal
+                        nested
+                        className="popup"
+                    >
+                        {close => (
+                            <div className="modal">
+                                <button className="close" onClick={close}>
+                                    &times;
+                                </button>
+                                <div className="form">
+                                    <h1 className="form-heading">Add Category</h1>
+                                    <div>
+                                        <label>Category Name</label>
+                                        <input className="input" onChange={nameChangeHandler}></input>
+                                    </div>
+                                    <div>
+                                        <label>Category Budget</label>
+                                        <input className="input"></input>
+                                    </div>
+                                    <button className = 'form-button' onClick={() => { onClick(); close() }}>Save Category</button>
+                                </div>
+                                <div className="actions">
+                                </div>
+                            </div>
+                        )}
+                    </Popup>
+
 
                 </TabList>
 
@@ -62,30 +89,7 @@ const Dashboard = ({ categories, onCategoryAdded }) => {
                     }
 
                     )}
-                    <TabPanel>
-                        {/* <AddCategoryPopUp /> */}
-                        <Popup
-                            // trigger={<button className="button"> Click for More Info </button>}
-                            modal
-                            nested
-                            className="popup"
-                        >
-                            {close => (
-                                <div className="modal">
-                                    <button className="close" onClick={close}>
-                                        &times;
-                                    </button>
-                                    <h1>Add Category</h1>
-                                    <br />
-                                    <label>Category Name</label>
-                                    <input onChange={nameChangeHandler}></input>
-                                    <button onClick={onClick}>Save Category</button>
-                                    <div className="actions">
-                                    </div>
-                                </div>
-                            )}
-                        </Popup>
-                    </TabPanel>
+
                 </div>
             </Tabs>
         </div>

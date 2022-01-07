@@ -9,7 +9,7 @@ const TransactionCard = () => {
 
     
     useEffect(() => {
-        fetch('https://wrapped1-backend.herokuapp.com/api/user/0/0/transactions')
+        fetch('https://wrapped1-backend.herokuapp.com/api/user/1/0/transactions') 
         .then(response => response.json())
         .then(json => setTransactionData(json))
     })
